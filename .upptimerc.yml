@@ -195,7 +195,8 @@ sites:
     #   - "Authorization: Bearer $GHL_API_KEY"
 
 status-website:
-  cname: status.levonk.com
+  # cname: status.levonk.com  # Uncomment after adding CNAME in Cloudflare: status.levonk.com -> levonk.github.io
+  baseUrl: /status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: "levonk Status"
   introTitle: "**levonk** external dependency uptime monitor"

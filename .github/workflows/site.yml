@@ -4,7 +4,10 @@
 # ===============================
 #
 # Your changes will be overwritten when the Upptime template updates (by default, weekly)
-# Instead, change .upptimerc.yml configuration and the workflows will be generated accordingly.
+# Instead, change .upptimerc.yml configuration and the workflows will be generated accordingly
+#
+# Modified: replaced peaceiris/actions-gh-pages with actions/deploy-pages
+# for workflow-based GitHub Pages deployment (build_type=workflow)
 #
 # 🔼 Upptime @v1.43.13
 # GitHub-powered open-source uptime monitor and status page by Anand Chowdhary
@@ -38,6 +41,9 @@ jobs:
     name: Build and deploy site
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -50,11 +56,12 @@ jobs:
           command: "site"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
-      - uses: peaceiris/actions-gh-pages@v4
-        name: GitHub Pages Deploy
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GH_PAT || github.token }}
-          publish_dir: "site/status-page/__sapper__/export/"
-          force_orphan: "false"
-          user_name: "Upptime Bot"
-          user_email: "73812536+upptime-bot@users.noreply.github.com"
+          path: "site/status-page/__sapper__/export/"
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

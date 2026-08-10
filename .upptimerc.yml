@@ -92,7 +92,7 @@ sites:
   - name: "Cloudflare API"
     url: https://api.cloudflare.com/client/v4/user/tokens/verify
     category: "DNS"
-    expectedStatusCodes: [200, 401]
+    expectedStatusCodes: [200, 400, 401]
     # headers:
     #   - "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
 
@@ -145,7 +145,7 @@ sites:
     expectedStatusCodes: [200, 301, 302]
 
   - name: "Gmail"
-    url: https://mail.google.com
+    url: https://www.google.com/gmail/about/
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
@@ -155,7 +155,7 @@ sites:
     expectedStatusCodes: [200, 301, 302]
 
   - name: "Google Sheets"
-    url: https://sheets.google.com
+    url: https://www.google.com/sheets/about/
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 

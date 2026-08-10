@@ -1,0 +1,222 @@
+owner: levonk
+repo: status
+
+sites:
+  # ─── AI APIs ───
+  # All AI API endpoints return 401 without auth, which proves the service is up.
+  # To verify deeper (quota, model availability), uncomment headers and add the
+  # key as a GitHub Actions secret, then reference it as ${{ secrets.NAME }}.
+  - name: "Devin API — levonk"
+    url: https://api.devin.ai/v1/health
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401, 404]
+    # headers:
+    #   Authorization: "Bearer $DEVIN_API_KEY"
+
+  - name: "OpenRouter API — levonk"
+    url: https://openrouter.ai/api/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $OPENROUTER_API_KEY"
+
+  - name: "OpenAI API — levonk"
+    url: https://api.openai.com/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $OPENAI_API_KEY"
+
+  - name: "Moonshot API — levonk"
+    url: https://api.moonshot.cn/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $MOONSHOT_API_KEY"
+
+  - name: "Z.ai API — levonk"
+    url: https://api.z.ai/api/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $ZAI_API_KEY"
+
+  - name: "DeepSeek API — levonk"
+    url: https://api.deepseek.com/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $DEEPSEEK_API_KEY"
+
+  - name: "Meta AI API (Llama) — levonk"
+    url: https://api.llama.com/v1/models
+    category: "AI APIs"
+    expectedStatusCodes: [200, 401, 404]
+    # headers:
+    #   Authorization: "Bearer $META_AI_API_KEY"
+
+  # ─── Cloud Providers ───
+  - name: "Oracle Cloud — levonk"
+    url: https://cloud.oracle.com
+    category: "Cloud Providers"
+    expectedStatusCodes: [200, 302, 301]
+
+  - name: "Amazon Web Services — levonk"
+    url: https://aws.amazon.com
+    category: "Cloud Providers"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Google Cloud — levonk"
+    url: https://cloud.google.com
+    category: "Cloud Providers"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Microsoft Azure — levonk"
+    url: https://azure.microsoft.com
+    category: "Cloud Providers"
+    expectedStatusCodes: [200, 301, 302]
+
+  # ─── DNS ───
+  - name: "Google DNS (8.8.8.8) — levonk"
+    url: https://dns.google/resolve?name=levonk.com&type=A
+    category: "DNS"
+    expectedStatusCodes: [200]
+
+  - name: "Cloudflare DNS (1.1.1.1) — levonk"
+    url: https://cloudflare-dns.com/dns-query?name=levonk.com&type=A
+    category: "DNS"
+    headers:
+      Accept: "application/dns-json"
+    expectedStatusCodes: [200]
+
+  - name: "Cloudflare API — levonk"
+    url: https://api.cloudflare.com/client/v4/user/tokens/verify
+    category: "DNS"
+    expectedStatusCodes: [200, 401]
+    # headers:
+    #   Authorization: "Bearer $CLOUDFLARE_API_TOKEN"
+
+  # ─── Social Networks ───
+  - name: "X (Twitter) — levonk"
+    url: https://x.com
+    category: "Social Networks"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "YouTube — levonk"
+    url: https://www.youtube.com
+    category: "Social Networks"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Instagram — levonk"
+    url: https://www.instagram.com
+    category: "Social Networks"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Telegram — levonk"
+    url: https://telegram.org
+    category: "Social Networks"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Telegram Bot API — levonk"
+    url: https://api.telegram.org
+    category: "Social Networks"
+    expectedStatusCodes: [200, 401, 404]
+    # For bot-specific health, use https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/getMe
+    # headers:
+    #   (token embedded in URL, no header needed)
+
+  - name: "Discord — levonk"
+    url: https://discord.com/api/v10/gateway
+    category: "Social Networks"
+    expectedStatusCodes: [200]
+    # For bot auth health, use /api/v10/users/@me with:
+    # headers:
+    #   Authorization: "Bot $DISCORD_BOT_TOKEN"
+
+  - name: "TikTok — levonk"
+    url: https://www.tiktok.com
+    category: "Social Networks"
+    expectedStatusCodes: [200, 301, 302]
+
+  # ─── Google Services ───
+  - name: "Google Drive — levonk"
+    url: https://drive.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Gmail — levonk"
+    url: https://mail.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Google Voice — levonk"
+    url: https://voice.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Google Sheets — levonk"
+    url: https://sheets.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Google Docs — levonk"
+    url: https://docs.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "Google Workspace — levonk"
+    url: https://workspace.google.com
+    category: "Google Services"
+    expectedStatusCodes: [200, 301, 302]
+
+  # ─── Automation & Communications ───
+  - name: "LiveKit Cloud — levonk"
+    url: https://cloud.livekit.io
+    category: "Automation & Comms"
+    expectedStatusCodes: [200, 301, 302]
+    # For API health with auth:
+    # headers:
+    #   Authorization: "Bearer $LIVEKIT_API_KEY"
+
+  - name: "n8n Cloud — levonk"
+    url: https://n8n.cloud
+    category: "Automation & Comms"
+    expectedStatusCodes: [200, 301, 302]
+    # For instance-specific health, point URL to your n8n instance health endpoint
+    # and add auth headers if required.
+
+  - name: "GoHighLevel — levonk"
+    url: https://app.gohighlevel.com
+    category: "Automation & Comms"
+    expectedStatusCodes: [200, 301, 302]
+    # For API health:
+    # url: https://services.leadconnectorhq.com/v2/locations
+    # headers:
+    #   Authorization: "Bearer $GHL_API_KEY"
+
+status-website:
+  cname: status.levonk.com
+  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  name: "levonk Status"
+  introTitle: "**levonk** external dependency uptime monitor"
+  introMessage: "Monitors uptime of third-party services that levonk infrastructure depends on. Powered by [Upptime](https://upptime.js.org) — runs entirely on GitHub Actions, no server required."
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/levonk/status
+    - title: Infrahub
+      href: https://github.com/levonk/infrahub
+
+# Notifications (uncomment and configure to enable)
+# See https://upptime.js.org/docs/notifications
+# notifications:
+#   - type: telegram
+#     token: $TELEGRAM_BOT_TOKEN
+#     chat_id: $TELEGRAM_CHAT_ID
+#   - type: webhook
+#     url: $NOTIFICATION_WEBHOOK_URL
+
+# Assign issues to users when sites go down (optional)
+# assignees:
+#   - levonk

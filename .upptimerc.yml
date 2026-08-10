@@ -6,49 +6,49 @@ sites:
   # All AI API endpoints return 401 without auth, which proves the service is up.
   # To verify deeper (quota, model availability), uncomment headers and add the
   # key as a GitHub Actions secret, then reference it as ${{ secrets.NAME }}.
-  - name: "Devin API — levonk"
+  - name: "Devin API"
     url: https://api.devin.ai/v1/health
     category: "AI APIs"
     expectedStatusCodes: [200, 401, 404]
     # headers:
     #   - "Authorization: Bearer $DEVIN_API_KEY"
 
-  - name: "OpenRouter API — levonk"
+  - name: "OpenRouter API"
     url: https://openrouter.ai/api/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
     #   - "Authorization: Bearer $OPENROUTER_API_KEY"
 
-  - name: "OpenAI API — levonk"
+  - name: "OpenAI API"
     url: https://api.openai.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
     #   - "Authorization: Bearer $OPENAI_API_KEY"
 
-  - name: "Moonshot API — levonk"
+  - name: "Moonshot API"
     url: https://api.moonshot.cn/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
     #   - "Authorization: Bearer $MOONSHOT_API_KEY"
 
-  - name: "Z.ai API — levonk"
+  - name: "Z.ai API"
     url: https://api.z.ai/api/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
     #   - "Authorization: Bearer $ZAI_API_KEY"
 
-  - name: "DeepSeek API — levonk"
+  - name: "DeepSeek API"
     url: https://api.deepseek.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
     #   - "Authorization: Bearer $DEEPSEEK_API_KEY"
 
-  - name: "Meta AI API (Llama) — levonk"
+  - name: "Meta AI API (Llama)"
     url: https://api.llama.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401, 404]
@@ -56,40 +56,40 @@ sites:
     #   - "Authorization: Bearer $META_AI_API_KEY"
 
   # ─── Cloud Providers ───
-  - name: "Oracle Cloud — levonk"
+  - name: "Oracle Cloud"
     url: https://cloud.oracle.com
     category: "Cloud Providers"
     expectedStatusCodes: [200, 302, 301]
 
-  - name: "Amazon Web Services — levonk"
+  - name: "Amazon Web Services"
     url: https://aws.amazon.com
     category: "Cloud Providers"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Google Cloud — levonk"
+  - name: "Google Cloud"
     url: https://cloud.google.com
     category: "Cloud Providers"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Microsoft Azure — levonk"
+  - name: "Microsoft Azure"
     url: https://azure.microsoft.com
     category: "Cloud Providers"
     expectedStatusCodes: [200, 301, 302]
 
   # ─── DNS ───
-  - name: "Google DNS (8.8.8.8) — levonk"
+  - name: "Google DNS (8.8.8.8)"
     url: https://dns.google/resolve?name=levonk.com&type=A
     category: "DNS"
     expectedStatusCodes: [200]
 
-  - name: "Cloudflare DNS (1.1.1.1) — levonk"
+  - name: "Cloudflare DNS (1.1.1.1)"
     url: https://cloudflare-dns.com/dns-query?name=levonk.com&type=A
     category: "DNS"
     headers:
       - "Accept: application/dns-json"
     expectedStatusCodes: [200]
 
-  - name: "Cloudflare API — levonk"
+  - name: "Cloudflare API"
     url: https://api.cloudflare.com/client/v4/user/tokens/verify
     category: "DNS"
     expectedStatusCodes: [200, 401]
@@ -97,27 +97,27 @@ sites:
     #   - "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
 
   # ─── Social Networks ───
-  - name: "X (Twitter) — levonk"
+  - name: "X (Twitter)"
     url: https://x.com
     category: "Social Networks"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "YouTube — levonk"
+  - name: "YouTube"
     url: https://www.youtube.com
     category: "Social Networks"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Instagram — levonk"
+  - name: "Instagram"
     url: https://www.instagram.com
     category: "Social Networks"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Telegram — levonk"
+  - name: "Telegram"
     url: https://telegram.org
     category: "Social Networks"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Telegram Bot API — levonk"
+  - name: "Telegram Bot API"
     url: https://api.telegram.org
     category: "Social Networks"
     expectedStatusCodes: [200, 401, 404]
@@ -125,7 +125,7 @@ sites:
     # headers:
     #   (token embedded in URL, no header needed)
 
-  - name: "Discord — levonk"
+  - name: "Discord"
     url: https://discord.com/api/v10/gateway
     category: "Social Networks"
     expectedStatusCodes: [200]
@@ -133,44 +133,44 @@ sites:
     # headers:
     #   - "Authorization: Bot $DISCORD_BOT_TOKEN"
 
-  - name: "TikTok — levonk"
+  - name: "TikTok"
     url: https://www.tiktok.com
     category: "Social Networks"
     expectedStatusCodes: [200, 301, 302]
 
   # ─── Google Services ───
-  - name: "Google Drive — levonk"
+  - name: "Google Drive"
     url: https://drive.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Gmail — levonk"
+  - name: "Gmail"
     url: https://mail.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Google Voice — levonk"
+  - name: "Google Voice"
     url: https://voice.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Google Sheets — levonk"
+  - name: "Google Sheets"
     url: https://sheets.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Google Docs — levonk"
+  - name: "Google Docs"
     url: https://docs.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
-  - name: "Google Workspace — levonk"
+  - name: "Google Workspace"
     url: https://workspace.google.com
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
   # ─── Automation & Communications ───
-  - name: "LiveKit Cloud — levonk"
+  - name: "LiveKit Cloud"
     url: https://cloud.livekit.io
     category: "Automation & Comms"
     expectedStatusCodes: [200, 301, 302]
@@ -178,14 +178,14 @@ sites:
     # headers:
     #   - "Authorization: Bearer $LIVEKIT_API_KEY"
 
-  - name: "n8n Cloud — levonk"
+  - name: "n8n Cloud"
     url: https://n8n.cloud
     category: "Automation & Comms"
     expectedStatusCodes: [200, 301, 302]
     # For instance-specific health, point URL to your n8n instance health endpoint
     # and add auth headers if required.
 
-  - name: "GoHighLevel — levonk"
+  - name: "GoHighLevel"
     url: https://app.gohighlevel.com
     category: "Automation & Comms"
     expectedStatusCodes: [200, 301, 302]
@@ -208,6 +208,17 @@ status-website:
       href: https://github.com/levonk/status
     - title: Infrahub
       href: https://github.com/levonk/infrahub
+
+# Global workflow schedule — all sites checked at this interval.
+# For tighter intervals on specific services, see uptime-critical.yml workflow.
+workflowSchedule:
+  uptime: "*/20 * * * *"
+  graphs: "0 0 * * *"
+  responseTime: "*/20 * * * *"
+  staticSite: "0 1 * * *"
+  summary: "*/20 * * * *"
+  updateTemplate: "0 0 * * 1"
+  updates: "0 6 * * *"
 
 # Notifications (uncomment and configure to enable)
 # See https://upptime.js.org/docs/notifications

@@ -11,49 +11,49 @@ sites:
     category: "AI APIs"
     expectedStatusCodes: [200, 401, 404]
     # headers:
-    #   Authorization: "Bearer $DEVIN_API_KEY"
+    #   - "Authorization: Bearer $DEVIN_API_KEY"
 
   - name: "OpenRouter API — levonk"
     url: https://openrouter.ai/api/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $OPENROUTER_API_KEY"
+    #   - "Authorization: Bearer $OPENROUTER_API_KEY"
 
   - name: "OpenAI API — levonk"
     url: https://api.openai.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $OPENAI_API_KEY"
+    #   - "Authorization: Bearer $OPENAI_API_KEY"
 
   - name: "Moonshot API — levonk"
     url: https://api.moonshot.cn/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $MOONSHOT_API_KEY"
+    #   - "Authorization: Bearer $MOONSHOT_API_KEY"
 
   - name: "Z.ai API — levonk"
     url: https://api.z.ai/api/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $ZAI_API_KEY"
+    #   - "Authorization: Bearer $ZAI_API_KEY"
 
   - name: "DeepSeek API — levonk"
     url: https://api.deepseek.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $DEEPSEEK_API_KEY"
+    #   - "Authorization: Bearer $DEEPSEEK_API_KEY"
 
   - name: "Meta AI API (Llama) — levonk"
     url: https://api.llama.com/v1/models
     category: "AI APIs"
     expectedStatusCodes: [200, 401, 404]
     # headers:
-    #   Authorization: "Bearer $META_AI_API_KEY"
+    #   - "Authorization: Bearer $META_AI_API_KEY"
 
   # ─── Cloud Providers ───
   - name: "Oracle Cloud — levonk"
@@ -86,7 +86,7 @@ sites:
     url: https://cloudflare-dns.com/dns-query?name=levonk.com&type=A
     category: "DNS"
     headers:
-      Accept: "application/dns-json"
+      - "Accept: application/dns-json"
     expectedStatusCodes: [200]
 
   - name: "Cloudflare API — levonk"
@@ -94,7 +94,7 @@ sites:
     category: "DNS"
     expectedStatusCodes: [200, 401]
     # headers:
-    #   Authorization: "Bearer $CLOUDFLARE_API_TOKEN"
+    #   - "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
 
   # ─── Social Networks ───
   - name: "X (Twitter) — levonk"
@@ -131,7 +131,7 @@ sites:
     expectedStatusCodes: [200]
     # For bot auth health, use /api/v10/users/@me with:
     # headers:
-    #   Authorization: "Bot $DISCORD_BOT_TOKEN"
+    #   - "Authorization: Bot $DISCORD_BOT_TOKEN"
 
   - name: "TikTok — levonk"
     url: https://www.tiktok.com
@@ -176,7 +176,7 @@ sites:
     expectedStatusCodes: [200, 301, 302]
     # For API health with auth:
     # headers:
-    #   Authorization: "Bearer $LIVEKIT_API_KEY"
+    #   - "Authorization: Bearer $LIVEKIT_API_KEY"
 
   - name: "n8n Cloud — levonk"
     url: https://n8n.cloud
@@ -192,7 +192,7 @@ sites:
     # For API health:
     # url: https://services.leadconnectorhq.com/v2/locations
     # headers:
-    #   Authorization: "Bearer $GHL_API_KEY"
+    #   - "Authorization: Bearer $GHL_API_KEY"
 
 status-website:
   cname: status.levonk.com

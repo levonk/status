@@ -1,7 +1,7 @@
 url: https://api.cloudflare.com/client/v4/user/tokens/verify
 status: up
 code: 400
-responseTime: 103
-lastUpdated: 2026-08-15T20:41:07.850Z
+responseTime: 53
+lastUpdated: 2026-08-15T21:13:07.365Z
 startTime: 2026-08-10T07:25:51.158Z
 generator: Upptime <https://github.com/upptime/upptime>

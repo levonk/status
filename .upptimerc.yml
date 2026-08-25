@@ -169,6 +169,21 @@ sites:
     category: "Google Services"
     expectedStatusCodes: [200, 301, 302]
 
+  # ─── Developer Platforms ───
+  - name: "GitHub"
+    url: https://github.com
+    category: "Developer Platforms"
+    expectedStatusCodes: [200, 301, 302]
+
+  - name: "GitHub API"
+    url: https://api.github.com
+    category: "Developer Platforms"
+    expectedStatusCodes: [200]
+    # For authenticated health/rate-limit inspection:
+    # url: https://api.github.com/rate_limit
+    # headers:
+    #   - "Authorization: Bearer $GITHUB_TOKEN"
+
   # ─── Automation & Communications ───
   - name: "LiveKit Cloud"
     url: https://cloud.livekit.io

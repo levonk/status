@@ -515,11 +515,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.github.com.ico",
     "slug": "git-hub-api",
     "status": "down",
-    "uptime": "98.80%",
-    "uptimeDay": "99.89%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "98.80%",
-    "uptimeYear": "98.80%",
+    "uptime": "98.73%",
+    "uptimeDay": "99.20%",
+    "uptimeWeek": "99.89%",
+    "uptimeMonth": "98.73%",
+    "uptimeYear": "98.73%",
     "time": 77,
     "timeDay": 87,
     "timeWeek": 65,
@@ -527,7 +527,7 @@
     "timeYear": 77,
     "dailyMinutesDown": {
       "2026-08-26": 156,
-      "2026-09-03": 2
+      "2026-09-03": 12
     }
   },
   {

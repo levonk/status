@@ -1,7 +1,7 @@
 url: https://cloudflare-dns.com/dns-query?name=levonk.com&type=A
 status: up
 code: 200
-responseTime: 310
-lastUpdated: 2026-10-08T07:28:40.322Z
+responseTime: 59
+lastUpdated: 2026-10-08T14:54:52.214Z
 startTime: 2026-08-10T07:25:50.692Z
 generator: Upptime <https://github.com/upptime/upptime>

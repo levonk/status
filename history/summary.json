@@ -516,17 +516,17 @@
     "url": "https://api.github.com",
     "icon": "https://icons.duckduckgo.com/ip3/api.github.com.ico",
     "slug": "git-hub-api",
-    "status": "down",
-    "uptime": "98.26%",
-    "uptimeDay": "96.51%",
-    "uptimeWeek": "99.50%",
-    "uptimeMonth": "98.51%",
-    "uptimeYear": "98.26%",
-    "time": 78,
-    "timeDay": 78,
-    "timeWeek": 92,
+    "status": "up",
+    "uptime": "98.23%",
+    "uptimeDay": "94.13%",
+    "uptimeWeek": "99.16%",
+    "uptimeMonth": "98.44%",
+    "uptimeYear": "98.23%",
+    "time": 79,
+    "timeDay": 91,
+    "timeWeek": 94,
     "timeMonth": 82,
-    "timeYear": 78,
+    "timeYear": 79,
     "dailyMinutesDown": {
       "2026-08-26": 156,
       "2026-09-03": 98,
@@ -539,7 +539,7 @@
       "2026-10-14": 54,
       "2026-10-15": 42,
       "2026-10-17": 217,
-      "2026-10-27": 50
+      "2026-10-27": 85
     }
   },
   {

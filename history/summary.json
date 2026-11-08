@@ -500,19 +500,19 @@
     "url": "https://github.com",
     "icon": "https://icons.duckduckgo.com/ip3/github.com.ico",
     "slug": "git-hub",
-    "status": "down",
-    "uptime": "99.73%",
-    "uptimeDay": "79.92%",
-    "uptimeWeek": "97.13%",
-    "uptimeMonth": "99.34%",
-    "uptimeYear": "99.73%",
+    "status": "up",
+    "uptime": "99.72%",
+    "uptimeDay": "78.78%",
+    "uptimeWeek": "96.97%",
+    "uptimeMonth": "99.30%",
+    "uptimeYear": "99.72%",
     "time": 219,
-    "timeDay": 341,
+    "timeDay": 322,
     "timeWeek": 220,
     "timeMonth": 233,
     "timeYear": 219,
     "dailyMinutesDown": {
-      "2026-11-08": 289
+      "2026-11-08": 306
     }
   },
   {
@@ -520,15 +520,15 @@
     "url": "https://api.github.com",
     "icon": "https://icons.duckduckgo.com/ip3/api.github.com.ico",
     "slug": "git-hub-api",
-    "status": "down",
-    "uptime": "98.23%",
-    "uptimeDay": "79.97%",
-    "uptimeWeek": "97.00%",
+    "status": "up",
+    "uptime": "98.21%",
+    "uptimeDay": "78.83%",
+    "uptimeWeek": "96.84%",
     "uptimeMonth": "97.84%",
-    "uptimeYear": "98.23%",
+    "uptimeYear": "98.21%",
     "time": 102,
-    "timeDay": 2282,
-    "timeWeek": 459,
+    "timeDay": 1916,
+    "timeWeek": 446,
     "timeMonth": 149,
     "timeYear": 102,
     "dailyMinutesDown": {
@@ -545,7 +545,7 @@
       "2026-10-17": 217,
       "2026-10-27": 85,
       "2026-11-01": 14,
-      "2026-11-08": 288
+      "2026-11-08": 305
     }
   },
   {
